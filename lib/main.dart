@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
-
+// 静态组件
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
