@@ -12,13 +12,23 @@ class MyApp extends StatelessWidget{
           backgroundImage: NetworkImage('https://img.dmallcdn.com/dshop/201910/a05afa9d-ead6-49bb-b872-0220b9d0b5e8_480x480H'),
           radius: 100.0,
         ),
-        new Container(
-          decoration: BoxDecoration(
-            color: Colors.lightBlue,
-          ),
-          padding: EdgeInsets.all(10.0),
-          child: Text('aYang 在此'),
-        )
+        // new Container(
+        //   decoration: BoxDecoration(
+        //     color: Colors.lightBlue,
+        //   ),
+        //   padding: EdgeInsets.all(10.0),
+        //   child: Text('aYang 在此'),
+        // )
+        new Positioned(
+          top: 10.0,
+          left: 60.0,
+          child: new Text('aYang.com'),
+        ),
+        new Positioned(
+          top: 100.0,
+          left: 60.0,
+          child: new Text('阿阳'),
+        ),
       ],
     );
 
