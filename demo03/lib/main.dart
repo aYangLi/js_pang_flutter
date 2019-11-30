@@ -5,6 +5,23 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    var stack = new Stack(
+      alignment: const FractionalOffset(0.5, 0.8),
+      children: <Widget>[
+        new CircleAvatar(
+          backgroundImage: NetworkImage('https://img.dmallcdn.com/dshop/201910/a05afa9d-ead6-49bb-b872-0220b9d0b5e8_480x480H'),
+          radius: 100.0,
+        ),
+        new Container(
+          decoration: BoxDecoration(
+            color: Colors.lightBlue,
+          ),
+          padding: EdgeInsets.all(10.0),
+          child: Text('aYang 在此'),
+        )
+      ],
+    );
+
     return MaterialApp(
       title: 'Row Widget Demo',
       home: Scaffold(
@@ -35,18 +52,23 @@ class MyApp extends StatelessWidget{
         // ),
         
         // 垂直方向布局
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('我是 aYang，'),
-            Text('我是 aYang，'),
-            Expanded(child:Text('我是 aYang，阿阳')),
-            Text('我是 aYang，'),
-            Text('我是 aYang，'),
-            Text('我是 aYang，'),
-            Text('我是 aYang，')
-          ],
+        // body: Column(
+        //   crossAxisAlignment: CrossAxisAlignment.center,
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: <Widget>[
+        //     Text('我是 aYang，'),
+        //     Text('我是 aYang，'),
+        //     Expanded(child:Text('我是 aYang，阿阳')),
+        //     Text('我是 aYang，'),
+        //     Text('我是 aYang，'),
+        //     Text('我是 aYang，'),
+        //     Text('我是 aYang，')
+        //   ],
+        // ),
+
+        // 层叠布局
+        body: Center(
+          child: stack,
         ),
       ),
     );
